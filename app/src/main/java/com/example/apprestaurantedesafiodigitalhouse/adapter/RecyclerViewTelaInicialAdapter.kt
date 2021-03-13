@@ -1,9 +1,13 @@
-package com.example.apprestaurantedesafiodigitalhouse
+package com.example.apprestaurantedesafiodigitalhouse.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.apprestaurantedesafiodigitalhouse.R
+import com.example.apprestaurantedesafiodigitalhouse.model.Restaurante
+import com.example.apprestaurantedesafiodigitalhouse.RestauranteViewHolder
+import com.example.apprestaurantedesafiodigitalhouse.TelaRestauranteActivity
 
 class RecyclerViewTelaInicialAdapter(val listaDeRestaurante: MutableList<Restaurante>) :
     RecyclerView.Adapter<RestauranteViewHolder>() {
@@ -19,6 +23,7 @@ class RecyclerViewTelaInicialAdapter(val listaDeRestaurante: MutableList<Restaur
     }
 
     override fun onBindViewHolder(holder: RestauranteViewHolder, position: Int) {
+        val cardViewTelaInicial = holder.cardViewRestaurante
         val nomeDoRestaurante = holder.nomeDoRestaurante
         val enderecoDoRestaurante = holder.enderecoDoRestaurante
         val horarioDeFuncionamentoDoRestaurante = holder.horarioDeFuncionamento
@@ -29,7 +34,7 @@ class RecyclerViewTelaInicialAdapter(val listaDeRestaurante: MutableList<Restaur
         horarioDeFuncionamentoDoRestaurante.text = listaDeRestaurante[position].horarioDeFuncionamento
         fotoDoRestaurante.setImageResource(listaDeRestaurante[position].fotoDoRestaurante)
 
-        holder.itemView.setOnClickListener {
+        cardViewTelaInicial.setOnClickListener {
             val intent = Intent(it.context, TelaRestauranteActivity::class.java)
             intent.putExtra("NOME_DO_RESTAURANTE", listaDeRestaurante[position].nomeDoRestaurante)
             intent.putExtra("FOTO_DO_RESTAURANTE", listaDeRestaurante[position].fotoDoRestaurante)
