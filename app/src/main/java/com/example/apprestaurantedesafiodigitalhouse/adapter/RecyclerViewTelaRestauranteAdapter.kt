@@ -9,7 +9,7 @@ import com.example.apprestaurantedesafiodigitalhouse.R
 import com.example.apprestaurantedesafiodigitalhouse.TelaDescricaoPratoPrincipalActivity
 import com.example.apprestaurantedesafiodigitalhouse.TelaRestauranteViewHolder
 
-class RecyclerViewTelaRestauranteAdapter(val listaDePratos: MutableList<PratosDoRestaurantes>) :
+class RecyclerViewTelaRestauranteAdapter(val listaDePratos: MutableList<PratosDoRestaurantes>):
     RecyclerView.Adapter<TelaRestauranteViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TelaRestauranteViewHolder {

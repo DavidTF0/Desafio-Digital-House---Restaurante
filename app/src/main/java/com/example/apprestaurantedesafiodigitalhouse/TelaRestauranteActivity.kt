@@ -7,15 +7,17 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.apprestaurantedesafiodigitalhouse.adapter.RecyclerViewTelaRestauranteAdapter
 
 class TelaRestauranteActivity : AppCompatActivity() {
 
-    val recyclerViewPratos = findViewById<RecyclerView>(R.id.recyclerview_tela_restaurante)
-    val imgDoRestaurante = findViewById<ImageView>(R.id.img_restaurante_menu)
-    val nomeDoRestaurante = findViewById<TextView>(R.id.nome_do_restaurante_menu)
-    val botaoVoltarTelaInicial = findViewById<ImageButton>(R.id.img_btn_back_to_tela_inicial)
+    val recyclerViewPratos by lazy { findViewById<RecyclerView>(R.id.recyclerview_tela_restaurante) }
+    val imgDoRestaurante by lazy { findViewById<ImageView>(R.id.img_restaurante_menu) }
+    val nomeDoRestaurante by lazy { findViewById<TextView>(R.id.nome_do_restaurante_menu) }
+    val botaoVoltarTelaInicial by lazy { findViewById<ImageButton>(R.id.img_btn_back_to_tela_inicial) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,7 +46,9 @@ class TelaRestauranteActivity : AppCompatActivity() {
             Toast.makeText(this, "Não foi possivel Carregar as informações", Toast.LENGTH_SHORT).show()
         }
 
-        recyclerViewPratos.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+
+        recyclerViewPratos.layoutManager = GridLayoutManager(this, 2)
+        recyclerViewPratos.adapter = RecyclerViewTelaRestauranteAdapter(ListasDeItens.listaDePrato())
 
     }
 }

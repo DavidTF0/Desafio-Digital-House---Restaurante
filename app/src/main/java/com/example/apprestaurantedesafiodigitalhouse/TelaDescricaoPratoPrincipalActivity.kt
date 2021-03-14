@@ -10,10 +10,10 @@ import androidx.appcompat.app.AppCompatActivity
 
 class TelaDescricaoPratoPrincipalActivity : AppCompatActivity() {
 
-    val imgDoPrato = findViewById<ImageView>(R.id.prato_principal_tela_descricao)
-    val nomeDoPrato = findViewById<TextView>(R.id.txt_nome_do_prato_tela_descricao)
-    val descricaoDoPrato = findViewById<TextView>(R.id.txt_descricao_prato_principal)
-    val botaoVoltarTelaRestauranteActivity = findViewById<ImageButton>(R.id.img_btn_back_to_tela_restaurante)
+    val imgDoPrato by lazy { findViewById<ImageView>(R.id.prato_principal_tela_descricao) }
+    val nomeDoPrato by lazy { findViewById<TextView>(R.id.txt_nome_do_prato_tela_descricao) }
+    val descricaoDoPrato by lazy { findViewById<TextView>(R.id.txt_descricao_prato_principal) }
+    val botaoVoltarTelaRestauranteActivity by lazy { findViewById<ImageButton>(R.id.img_btn_back_to_tela_restaurante) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

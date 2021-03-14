@@ -4,10 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.apprestaurantedesafiodigitalhouse.adapter.RecyclerViewTelaInicialAdapter
 
 class MainActivity : AppCompatActivity() {
 
-    val recyclerViewTelaInicial = findViewById<RecyclerView>(R.id.recyclerview_tela_inicial)
+    val recyclerViewTelaInicial by lazy { findViewById<RecyclerView>(R.id.recyclerview_tela_inicial) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 
 
     fun initApp(){
-        recyclerViewTelaInicial.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
+        recyclerViewTelaInicial.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
+        recyclerViewTelaInicial.adapter = RecyclerViewTelaInicialAdapter(ListasDeItens.listaDeRestaurantes())
     }
 }
