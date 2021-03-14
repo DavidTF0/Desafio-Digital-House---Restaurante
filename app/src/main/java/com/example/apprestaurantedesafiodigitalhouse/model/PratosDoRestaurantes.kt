@@ -1,3 +1,5 @@
 package com.example.apprestaurantedesafiodigitalhouse.model
 
-data class PratosDoRestaurantes (val nomeDoPrato: String, val fotoDoPrato: Int, val descricaoPratoPrincipal: String)
+import java.io.Serializable
+
+data class PratosDoRestaurantes (val nomeDoPrato: String, val fotoDoPrato: Int, val descricaoPratoPrincipal: String): Serializable

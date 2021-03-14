@@ -37,9 +37,8 @@ class TelaDescricaoPratoPrincipalActivity : AppCompatActivity() {
         if (infosPratos != null) {
 
             val nomePrato = infosPratos.getString("NOME_DO_PRATO", "Não ha um nome de Prato")
-            val fotoDoPrato = infosPratos.getInt("FOTO_DO_RESTAURANTE")
-            val descricaoPratoPrincipal =
-                infosPratos.getString("DESCRICAO_DO_PRATO", "Não ha uma descriçao")
+            val fotoDoPrato = infosPratos.getInt("FOTO_DO_PRATO")
+            val descricaoPratoPrincipal = infosPratos.getString("DESCRICAO_DO_PRATO", "Não ha uma descriçao")
 
             nomeDoPrato.text = nomePrato
             imgDoPrato.setImageResource(fotoDoPrato)

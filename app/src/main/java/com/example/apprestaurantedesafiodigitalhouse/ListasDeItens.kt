@@ -30,73 +30,63 @@ object ListasDeItens {
     }
 
 
-    fun Restaurante01(): List<PratosDoRestaurantes> {
+    private fun Restaurante01(): List<PratosDoRestaurantes> {
         val listaDePratoRestaurate01 = listOf<PratosDoRestaurantes>(
             PratosDoRestaurantes(
                 "Lazanha",
                 R.drawable.prato_lasanha,
-                "Lazanha assada no forno, feita com presunto, mussarela" +
-                        "e carne moida"
+                "Lazanha assada no forno, feita com presunto, mussarela e carne moida"
             ),
             PratosDoRestaurantes(
                 "Lazanha",
                 R.drawable.prato_lasanha,
-                "Lazanha assada no forno, feita com presunto, mussarela" +
-                        "e carne moida"
+                "Lazanha assada no forno, feita com presunto, mussarela e carne moida"
             ),
             PratosDoRestaurantes(
                 "Lazanha",
                 R.drawable.prato_lasanha,
-                "Lazanha assada no forno, feita com presunto, mussarela" +
-                        "e carne moida"
+                "Lazanha assada no forno, feita com presunto, mussarela e carne moida"
             ),
             PratosDoRestaurantes(
                 "Lazanha",
                 R.drawable.prato_lasanha,
-                "Lazanha assada no forno, feita com presunto, mussarela" +
-                        "e carne moida"
+                "Lazanha assada no forno, feita com presunto, mussarela e carne moida"
             ),
             PratosDoRestaurantes(
                 "Lazanha",
                 R.drawable.prato_lasanha,
-                "Lazanha assada no forno, feita com presunto, mussarela" +
-                        "e carne moida"
+                "Lazanha assada no forno, feita com presunto, mussarela e carne moida"
             ),
             PratosDoRestaurantes(
                 "Lazanha",
                 R.drawable.prato_lasanha,
-                "Lazanha assada no forno, feita com presunto, mussarela" +
-                        "e carne moida"
+                "Lazanha assada no forno, feita com presunto, mussarela e carne moida"
             ),
             PratosDoRestaurantes(
                 "Lazanha",
                 R.drawable.prato_lasanha,
-                "Lazanha assada no forno, feita com presunto, mussarela" +
-                        "e carne moida"
+                "Lazanha assada no forno, feita com presunto, mussarela e carne moida"
             ),
             PratosDoRestaurantes(
                 "Lazanha",
                 R.drawable.prato_lasanha,
-                "Lazanha assada no forno, feita com presunto, mussarela" +
-                        "e carne moida"
+                "Lazanha assada no forno, feita com presunto, mussarela e carne moida"
             ),
             PratosDoRestaurantes(
                 "Lazanha",
                 R.drawable.prato_lasanha,
-                "Lazanha assada no forno, feita com presunto, mussarela" +
-                        "e carne moida"
+                "Lazanha assada no forno, feita com presunto, mussarela e carne moida"
             ),
             PratosDoRestaurantes(
                 "Lazanha",
                 R.drawable.prato_lasanha,
-                "Lazanha assada no forno, feita com presunto, mussarela" +
-                        "e carne moida"
+                "Lazanha assada no forno, feita com presunto, mussarela e carne moida"
             )
         )
         return listaDePratoRestaurate01
     }
 
-    fun Restaurante02(): List<PratosDoRestaurantes> {
+    private fun Restaurante02(): List<PratosDoRestaurantes> {
 
         val listaDePratosDoRestaurantes02 = listOf<PratosDoRestaurantes>(
 
@@ -137,99 +127,6 @@ object ListasDeItens {
             )
         )
         return listaDePratosDoRestaurantes02
-    }
-
-    fun listaDePrato(): MutableList<PratosDoRestaurantes> {
-        val listaDePratoRestaurate01 = mutableListOf<PratosDoRestaurantes>()
-
-        listaDePratoRestaurate01.add(
-            PratosDoRestaurantes(
-                "Lazanha",
-                R.drawable.prato_lasanha,
-                "Lazanha assada no forno, feita com presunto, mussarela" +
-                        "e carne moida"
-            )
-        )
-
-        listaDePratoRestaurate01.add(
-            PratosDoRestaurantes(
-                "Lazanha",
-                R.drawable.prato_lasanha,
-                "Lazanha assada no forno, feita com presunto, mussarela" +
-                        "e carne moida"
-            )
-        )
-
-        listaDePratoRestaurate01.add(
-            PratosDoRestaurantes(
-                "Lazanha",
-                R.drawable.prato_lasanha,
-                "Lazanha assada no forno, feita com presunto, mussarela" +
-                        "e carne moida"
-            )
-        )
-
-        listaDePratoRestaurate01.add(
-            PratosDoRestaurantes(
-                "Lazanha",
-                R.drawable.prato_lasanha,
-                "Lazanha assada no forno, feita com presunto, mussarela" +
-                        "e carne moida"
-            )
-        )
-
-        listaDePratoRestaurate01.add(
-            PratosDoRestaurantes(
-                "Lazanha",
-                R.drawable.prato_lasanha,
-                "Lazanha assada no forno, feita com presunto, mussarela" +
-                        "e carne moida"
-            )
-        )
-
-        listaDePratoRestaurate01.add(
-            PratosDoRestaurantes(
-                "Bife De Contra File",
-                R.drawable.bife_de_contra_file,
-                "Bife de Contra File com Fritas, acompanhado de arroz e Feijão"
-            )
-        )
-        listaDePratoRestaurate01.add(
-            PratosDoRestaurantes(
-                "Bife De Contra File",
-                R.drawable.bife_de_contra_file,
-                "Bife de Contra File com Fritas, acompanhado de arroz e Feijão"
-            )
-        )
-        listaDePratoRestaurate01.add(
-            PratosDoRestaurantes(
-                "Bife De Contra File",
-                R.drawable.bife_de_contra_file,
-                "Bife de Contra File com Fritas, acompanhado de arroz e Feijão"
-            )
-        )
-        listaDePratoRestaurate01.add(
-            PratosDoRestaurantes(
-                "Bife De Contra File",
-                R.drawable.bife_de_contra_file,
-                "Bife de Contra File com Fritas, acompanhado de arroz e Feijão"
-            )
-        )
-        listaDePratoRestaurate01.add(
-            PratosDoRestaurantes(
-                "Bife De Contra File",
-                R.drawable.bife_de_contra_file,
-                "Bife de Contra File com Fritas, acompanhado de arroz e Feijão"
-            )
-        )
-        listaDePratoRestaurate01.add(
-            PratosDoRestaurantes(
-                "Bife De Contra File",
-                R.drawable.bife_de_contra_file,
-                "Bife de Contra File com Fritas, acompanhado de arroz e Feijão"
-            )
-        )
-        return listaDePratoRestaurate01
     }
 }
 

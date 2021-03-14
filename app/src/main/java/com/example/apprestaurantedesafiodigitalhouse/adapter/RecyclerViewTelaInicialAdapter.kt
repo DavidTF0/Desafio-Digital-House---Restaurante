@@ -8,6 +8,7 @@ import com.example.apprestaurantedesafiodigitalhouse.R
 import com.example.apprestaurantedesafiodigitalhouse.model.Restaurante
 import com.example.apprestaurantedesafiodigitalhouse.RestauranteViewHolder
 import com.example.apprestaurantedesafiodigitalhouse.TelaRestauranteActivity
+import com.example.apprestaurantedesafiodigitalhouse.model.PratosDoRestaurantes
 
 class RecyclerViewTelaInicialAdapter(val listaDeRestaurante: List<Restaurante>) :
     RecyclerView.Adapter<RestauranteViewHolder>() {
@@ -35,9 +36,13 @@ class RecyclerViewTelaInicialAdapter(val listaDeRestaurante: List<Restaurante>) 
         fotoDoRestaurante.setImageResource(listaDeRestaurante[position].fotoDoRestaurante)
 
         cardViewTelaInicial.setOnClickListener {
+
+            val listaArray: ArrayList<PratosDoRestaurantes> = ArrayList(listaDeRestaurante[position].listaDePratosDoRestaurante)
+
             val intent = Intent(it.context, TelaRestauranteActivity::class.java)
             intent.putExtra("NOME_DO_RESTAURANTE", listaDeRestaurante[position].nomeDoRestaurante)
             intent.putExtra("FOTO_DO_RESTAURANTE", listaDeRestaurante[position].fotoDoRestaurante)
+            intent.putExtra("LISTA_DE_PRATOS", listaArray)
             it.context.startActivity(intent)
         }
     }

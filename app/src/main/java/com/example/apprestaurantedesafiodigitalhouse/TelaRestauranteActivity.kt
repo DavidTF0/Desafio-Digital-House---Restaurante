@@ -2,15 +2,17 @@ package com.example.apprestaurantedesafiodigitalhouse
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Parcelable
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apprestaurantedesafiodigitalhouse.adapter.RecyclerViewTelaRestauranteAdapter
+import com.example.apprestaurantedesafiodigitalhouse.model.PratosDoRestaurantes
+import java.io.Serializable
 
 class TelaRestauranteActivity : AppCompatActivity() {
 
@@ -38,9 +40,11 @@ class TelaRestauranteActivity : AppCompatActivity() {
         if (infos != null){
             val nomeRestaurante = infos.getString("NOME_DO_RESTAURANTE")
             val foto = infos.getInt("FOTO_DO_RESTAURANTE")
+            val listaDePratos = infos.getSerializable("LISTA_DE_PRATOS")
 
             nomeDoRestaurante.text = nomeRestaurante
             imgDoRestaurante.setImageResource(foto)
+            recyclerViewPratos.adapter = RecyclerViewTelaRestauranteAdapter(getListaDePratos(listaDePratos))
 
         } else {
             Toast.makeText(this, "Não foi possivel Carregar as informações", Toast.LENGTH_SHORT).show()
@@ -48,7 +52,16 @@ class TelaRestauranteActivity : AppCompatActivity() {
 
 
         recyclerViewPratos.layoutManager = GridLayoutManager(this, 2)
-        recyclerViewPratos.adapter = RecyclerViewTelaRestauranteAdapter(ListasDeItens.listaDePrato())
 
+
+    }
+
+    private fun getListaDePratos(lista: Serializable?): MutableList<PratosDoRestaurantes> {
+        val listaArray = lista
+        var mutableListDePratos = mutableListOf<PratosDoRestaurantes>()
+
+        mutableListDePratos = listaArray as MutableList<PratosDoRestaurantes>
+
+        return mutableListDePratos
     }
 }
