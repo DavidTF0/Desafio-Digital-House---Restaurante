@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tela_login)
-
         login()
     }
 
@@ -29,10 +28,8 @@ class MainActivity : AppCompatActivity() {
     fun login() {
 
         btnLogin.setOnClickListener {
-
             val intentIniciarApp = Intent(it.context, TelaInicialRestaurantesActivity::class.java)
             it.context.startActivity(intentIniciarApp)
-
         }
     }
 
