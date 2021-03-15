@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apprestaurantedesafiodigitalhouse.R
 import com.example.apprestaurantedesafiodigitalhouse.model.Restaurante
-import com.example.apprestaurantedesafiodigitalhouse.RestauranteViewHolder
-import com.example.apprestaurantedesafiodigitalhouse.TelaRestauranteActivity
+import com.example.apprestaurantedesafiodigitalhouse.holder.RestauranteViewHolder
+import com.example.apprestaurantedesafiodigitalhouse.view.TelaRestauranteActivity
 import com.example.apprestaurantedesafiodigitalhouse.model.PratosDoRestaurantes
 
 class RecyclerViewTelaInicialAdapter(val listaDeRestaurante: List<Restaurante>) :

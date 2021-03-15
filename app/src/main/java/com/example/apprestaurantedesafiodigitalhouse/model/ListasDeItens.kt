@@ -1,12 +1,11 @@
-package com.example.apprestaurantedesafiodigitalhouse
+package com.example.apprestaurantedesafiodigitalhouse.model
 
-import com.example.apprestaurantedesafiodigitalhouse.model.PratosDoRestaurantes
-import com.example.apprestaurantedesafiodigitalhouse.model.Restaurante
+import com.example.apprestaurantedesafiodigitalhouse.R
 
 object ListasDeItens {
 
 
-    fun listaDeRestaurantes(): List<Restaurante> {
+    private fun listaDeRestaurantes(): List<Restaurante> {
 
         val listaDeRestaurantes = listOf<Restaurante>(
 
@@ -127,6 +126,10 @@ object ListasDeItens {
             )
         )
         return listaDePratosDoRestaurantes02
+    }
+
+    fun getListaDeRestaurantes(): List<Restaurante> {
+        return listaDeRestaurantes()
     }
 }
 

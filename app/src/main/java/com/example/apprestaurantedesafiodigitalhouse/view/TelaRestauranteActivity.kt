@@ -1,8 +1,7 @@
-package com.example.apprestaurantedesafiodigitalhouse
+package com.example.apprestaurantedesafiodigitalhouse.view
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Parcelable
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
@@ -10,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.apprestaurantedesafiodigitalhouse.R
 import com.example.apprestaurantedesafiodigitalhouse.adapter.RecyclerViewTelaRestauranteAdapter
 import com.example.apprestaurantedesafiodigitalhouse.model.PratosDoRestaurantes
 import java.io.Serializable
@@ -28,11 +28,11 @@ class TelaRestauranteActivity : AppCompatActivity() {
         initTelaRestaurante()
     }
 
-    fun initTelaRestaurante (){
+    private fun initTelaRestaurante (){
         val infos = intent.extras
 
         botaoVoltarTelaInicial.setOnClickListener {
-            val intentVoltarTelaInicial = Intent(it.context, MainActivity::class.java)
+            val intentVoltarTelaInicial = Intent(it.context, TelaInicialRestaurantesActivity::class.java)
             it.context.startActivity(intentVoltarTelaInicial)
             finish()
         }
@@ -52,6 +52,7 @@ class TelaRestauranteActivity : AppCompatActivity() {
 
 
         recyclerViewPratos.layoutManager = GridLayoutManager(this, 2)
+        recyclerViewPratos.isNestedScrollingEnabled
 
 
     }

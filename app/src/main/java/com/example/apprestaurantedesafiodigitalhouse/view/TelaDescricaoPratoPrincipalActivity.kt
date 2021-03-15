@@ -1,12 +1,12 @@
-package com.example.apprestaurantedesafiodigitalhouse
+package com.example.apprestaurantedesafiodigitalhouse.view
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.apprestaurantedesafiodigitalhouse.R
 
 class TelaDescricaoPratoPrincipalActivity : AppCompatActivity() {
 
@@ -27,11 +27,7 @@ class TelaDescricaoPratoPrincipalActivity : AppCompatActivity() {
         val infosPratos = intent.extras
 
         botaoVoltarTelaRestauranteActivity.setOnClickListener {
-
-            val intentVoltarTelaRestaurante =
-                Intent(it.context, TelaRestauranteActivity::class.java)
-            it.context.startActivity(intentVoltarTelaRestaurante)
-            finish()
+            onBackPressed()
         }
 
         if (infosPratos != null) {
